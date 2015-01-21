@@ -13,15 +13,18 @@ INSTALLATION
 Run the following command to install pg:
   `gem install pg`
 
-Run the following command to run the postgreSQL server:
+Run the following command to start the postgreSQL server:
+  `postgres`
+
+Run the following command to access psql:
   `psql`
 
-Run the following commands to create the databases:
-  `CREATE DATABASE to_do`
-  `\c to_do`
-  `CREATE TABLE lists (id serial PRIMARY KEY, name varchar)`
-  `CREATE TABLE tasks (id serial PRIMARY KEY, description varchar, list_id int);`
-  `CREATE DATABASE to_do_test WITH TEMPLATE to_do; `
+Run the following commands in `psql` to create the databases:
+  `CREATE DATABASE to_do;`,
+  `\c to_do`,
+  `CREATE TABLE lists (id serial PRIMARY KEY, name varchar);`,
+  `CREATE TABLE tasks (id serial PRIMARY KEY, description varchar, list_id int);`,
+  `CREATE DATABASE to_do_test WITH TEMPLATE to_do;`
 
 Run the following command to install bundle:
   `gem install bundle`
