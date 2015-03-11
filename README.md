@@ -2,44 +2,68 @@ INTRODUCTION
 ------------
 The To-Do List allows the user to enter lists and assign tasks. The tasks are ordered by due date.
 
+This app demonstrates usage of Ruby, BDD, RSpec, Sinatra, and PostgreSQL with a focus on using database commands, adding/removing tables and columns in the database, and using objects within other objects.
+
 REQUIREMENTS
 ------------
 Ruby v 2.2.0
+
 postgreSQL 9.4.0
 
 
 INSTALLATION
 ------------
 Run the following command to install pg:
+
   `gem install pg`
 
 Run the following command to start the postgreSQL server:
+
   `postgres`
 
 Run the following command to access psql:
+
   `psql`
 
 Run the following commands in `psql` to create the databases:
-  `CREATE DATABASE to_do;`,
-  `\c to_do`,
-  `CREATE TABLE lists (id serial PRIMARY KEY, name varchar);`,
-  `CREATE TABLE tasks (id serial PRIMARY KEY, description varchar, list_id int);`,
+
+  `CREATE DATABASE to_do;`
+
+  `\c to_do`
+
+  `CREATE TABLE lists (id serial PRIMARY KEY, name varchar);`
+
+  `CREATE TABLE tasks (id serial PRIMARY KEY, description varchar, list_id int);`
+
   `CREATE DATABASE to_do_test WITH TEMPLATE to_do;`
 
-Run the following command to install bundle:
+Run the following command to install bundler:
+
   `gem install bundle`
 
 Run the following command to install all required gems:
+
   `bundle`
 
-Run the following command to install rspec:
+Run the following command to install RSpec:
+
   `gem install rspec`
+
+Run the following command to start the Sinatra server:
+
+  `$ ruby app.rb`
+
+Go to the following site in Chrome to launch the app:
+
+  `localhost:4567`
+
 
 KNOWN BUGS
 ---------
 Errors out when incorrect date format is entered.
 
-AUTHOR
+
+AUTHORS
 -------
 Lauren Marcus
 lauren.e.marcus@gmail.com
